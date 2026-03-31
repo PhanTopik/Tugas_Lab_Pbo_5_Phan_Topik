@@ -1,13 +1,13 @@
 package edu.ecommerce;
 
 public class Order {
-    private String idPesanan;
-    private String namaPembeli;
+    private String orderId;
+    private String customerName;
     private double total;
 
-    public Order(String idPesanan, String namaPembeli) {
-        this.idPesanan = idPesanan;
-        this.namaPembeli = namaPembeli;
+    public Order(String orderId, String customerName) {
+        this.orderId = orderId;
+        this.customerName = customerName;
     }
 
     public class OrderItem {
@@ -39,8 +39,8 @@ public class Order {
     }
 
     public void tampilkanRincian(OrderItem[] items) {
-        System.out.println("ID Pesanan      : " + idPesanan);
-        System.out.println("Nama Pembeli : " + namaPembeli);
+        System.out.println("ID Pesanan      : " + orderId);
+        System.out.println("Nama Pembeli : " + customerName);
         System.out.println("---------------------------------------------------------");
         System.out.printf("| %-20s | %-10s | %-5s | %-10s\n", "Produk", "Harga", "Qty", "Subtotal");
         System.out.println("---------------------------------------------------------");
